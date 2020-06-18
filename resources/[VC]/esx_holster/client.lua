@@ -1,0 +1,165 @@
+----------------------------------------------------------------
+-- Copyright © 2019 by Guy Shefer
+-- Made By: Guy293
+-- GitHub: https://github.com/Guy293
+-- Fivem Forum: https://forum.fivem.net/u/guy293/
+-- Tweaked by: Campinchris
+----------------------------------------------------------------
+
+--- DO NOT EDIT THIS --
+local ESX      	 = nil
+local holstered  = true
+local blocked	 = false
+local timer  = 0
+local PlayerData = {}
+------------------------
+
+Citizen.CreateThread(function()
+	while ESX == nil do
+		TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+		Citizen.Wait(0)
+	end
+	
+	while ESX.GetPlayerData().job == nil do
+		Citizen.Wait(10)
+	end
+
+	PlayerData = ESX.GetPlayerData()
+end)
+
+RegisterNetEvent('esx:playerLoaded')
+	AddEventHandler('esx:playerLoaded', function(xPlayer)
+		PlayerData = xPlayer
+	end)
+
+RegisterNetEvent('esx:setJob')
+	AddEventHandler('esx:setJob', function(job)
+  		PlayerData.job = job
+	end)
+
+ Citizen.CreateThread(function()
+	while true do
+		Citizen.Wait(0)
+		loadAnimDict("rcmjosh4")
+		loadAnimDict("reaction@intimidation@cop@unarmed")
+		loadAnimDict("reaction@intimidation@1h")
+		local ped = PlayerPedId()
+		if PlayerData.job ~= nil and PlayerData.job.name == 'police' then
+			if not IsPedInAnyVehicle(ped, false) then
+				if DoesEntityExist( ped ) and not IsEntityDead( ped ) and GetVehiclePedIsTryingToEnter (ped) == 0 and not IsPedInParachuteFreeFall (ped) then
+					if CheckWeapon(ped) then
+						--if IsPedArmed(ped, 4) then
+						if holstered then
+							blocked   = true
+							TaskPlayAnim(ped, "reaction@intimidation@cop@unarmed", "intro", 8.0, 2.0, -1, 50, 2.0, 0, 0, 0 ) -- Change 50 to 30 if you want to stand still when removing weapon
+						--	TaskPlayAnim(ped, "reaction@intimidation@cop@unarmed", "intro", 8.0, 2.0, -1, 30, 2.0, 0, 0, 0 ) Use this line if you want to stand still when removing weapon
+							Citizen.Wait(Config.CooldownPolice)
+							TaskPlayAnim(ped, "rcmjosh4", "josh_leadout_cop2", 8.0, 2.0, -1, 48, 10, 0, 0, 0 )
+							Citizen.Wait(400)
+							ClearPedTasks(ped)
+							holstered = false
+							if GetGameTimer() - 10000  > timer then
+								ESX.TriggerServerCallback('3dme:getIcName', function(PlayerName)
+
+									if PlayerName ~= nil then
+							
+										local text = '* ' .. PlayerName .. ' aslahasho dar miare *'
+	
+		
+										TriggerServerEvent('3dme:shareDisplay', text, false)
+							
+									end
+							
+								end)
+								timer = GetGameTimer()
+							end
+						else
+							blocked = false
+						end
+					else
+					--elseif not IsPedArmed(ped, 4) then
+						holstered = true
+					end
+				else
+					SetCurrentPedWeapon(ped, GetHashKey("WEAPON_UNARMED"), true)
+				end
+			else
+				holstered = true
+			end
+		else
+			if not IsPedInAnyVehicle(ped, false) then
+				if DoesEntityExist( ped ) and not IsEntityDead( ped ) and GetVehiclePedIsTryingToEnter (ped) == 0 and not IsPedInParachuteFreeFall (ped) then
+					if CheckWeapon(ped) then
+						--if IsPedArmed(ped, 4) then
+						if holstered then
+							ESX.TriggerServerCallback('3dme:getIcName', function(PlayerName)
+
+								if PlayerName ~= nil then
+						
+									local text = '* ' .. PlayerName .. ' aslahasho dar miare *'
+
+	
+									TriggerServerEvent('3dme:shareDisplay', text, false)
+									print('done')
+						
+								end
+						
+							end)
+							blocked   = true
+							TaskPlayAnim(ped, "reaction@intimidation@1h", "intro", 5.0, 1.0, -1, 50, 0, 0, 0, 0 )
+						--	TaskPlayAnim(ped, "reaction@intimidation@1h", "intro", 5.0, 1.0, -1, 30, 0, 0, 0, 0 ) Use this line if you want to stand still when removing weapon
+							Citizen.Wait(Config.cooldown)
+							ClearPedTasks(ped)
+							holstered = false
+						else
+							blocked = false
+						end
+					else
+					--elseif not IsPedArmed(ped, 4) then
+					holstered = true
+					end
+				else
+					SetCurrentPedWeapon(ped, GetHashKey("WEAPON_UNARMED"), true)
+				end
+			else
+				holstered = true
+			end
+		end
+	end
+end)
+
+Citizen.CreateThread(function()
+	while true do
+		Citizen.Wait(0)
+			if blocked then
+				DisableControlAction(1, 25, true )
+				DisableControlAction(1, 140, true)
+				DisableControlAction(1, 141, true)
+				DisableControlAction(1, 142, true)
+				DisableControlAction(1, 23, true)
+				DisableControlAction(1, 37, true) -- Disables INPUT_SELECT_WEAPON (TAB)
+				DisablePlayerFiring(ped, true) -- Disable weapon firing
+			end
+	end
+end)
+
+
+function CheckWeapon(ped)
+	--[[if IsPedArmed(ped, 4) then
+		return true
+	end]]
+	for i = 1, #Config.Weapons do
+		if GetHashKey(Config.Weapons[i]) == GetSelectedPedWeapon(ped) then
+			return true
+		end
+	end
+	return false
+end
+
+
+function loadAnimDict(dict)
+	while ( not HasAnimDictLoaded(dict)) do
+		RequestAnimDict(dict)
+		Citizen.Wait(0)
+	end
+end
