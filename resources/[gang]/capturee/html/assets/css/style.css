@@ -1,0 +1,35 @@
+.card {
+  background: #6060607a;
+}
+.card .card-body .card-text {
+  color:#fff;
+}
+.card .fa {
+  color:#fff;
+}
+.cashmoney {
+  color:green;
+}
+.progress, .progress-bar {
+    height: 2.2vh !important;
+}
+.card .fa {
+  font-size:1.3rem;
+}
+.card .bar { margin-bottom: .3rem; }
+.progress { background: #e9ecef33;}
+.ganguiholder{
+  margin-top:10vh;
+}
+p,span {
+  font-size: 2vh;
+}
+* {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
