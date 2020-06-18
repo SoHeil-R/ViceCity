@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Register Form</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="css/nunito-font.css">
+	<!-- Main Style Css -->
+	<link rel="stylesheet" href="css/style.css"/>
+	<!-- <script src="nui://game/ui/jquery.js" type="text/javascript"></script> -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script src="bootstrap.min.js"></script>
+</head>
+<body class="form-v6" style="display: none;background: none;">
+	<div class="page-content">
+		<div class="form-left" style="position: absolute;z-index: 99;margin: -85px;margin-left: -200px;">
+			<img src="14.png" alt="form">
+		</div>
+		<div class="form-v6-content">
+			<div class="form-left">
+				<img src="back.jpg" style="height: 585px;" alt="form">
+			</div>
+
+			<form class="form-detail" action="#" method="post" autocomplete="off">
+				<h2>Register Form</h2>
+				<div class="form-row">
+					<input type="text" name="name" id="name" class="input-text" placeholder="Your Name" required>
+				</div>
+				<div class="form-row">
+					<input type="text" name="family" id="family" class="input-text" placeholder="Your Family" required>
+				</div>
+				<div class="form-row">
+					<input type="text" name="dateofbirth" id="dateofbirth" readonly class="input-text" placeholder="Data of Birth" required>
+				</div>
+				<div class="form-row-last">
+					<input type="submit" id="register" name="register" class="register" value="Register">
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+	<!-- Button trigger modal -->
+	<button type="button" style="display:none;" id="clicktomod"  data-toggle="modal" data-target="#modal"></button>
+
+	<!-- Modal -->
+	<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="modalTitle"></h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <span id="modalText"></span>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<script src="script.js" type="text/javascript"></script>
+</body>
+</html>
