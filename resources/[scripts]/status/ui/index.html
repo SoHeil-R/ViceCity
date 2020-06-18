@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+    </head>
+    <body style="visibility: hidden;display: block;"
+        <!-- style="visibility: hidden;" -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div style="width: 13vw; position: absolute; margin-top: 3vh; right: .5vw; /* min-width: 250px; */">
+          <div style="background-color: rgba(58, 58, 58, 0.247); border-radius: 5px;border-top-left-radius: 40px;border-top-right-radius: 40px;" class="p-2 mb-4 text-center text-white">
+            <h4>𝑽𝒊𝒄𝒆𝑪𝒊𝒕𝒚</h4>
+            <div class="w-100 d-flex">
+              <div class="ping col-md-4"><i style="display:block;float:left;margin-right: .2vw;" class="fa fa-signal"></i> <span name="ping" style="font-size:0.430vw;display:block;float:left;">80ms</span></div>
+              <span class="time col-md-4" id="hour">12:12</span>
+              <span class="charge col-md-4"><i style="float: right;" class="fa fa-battery-full float-right"></i></span>
+            </div>
+          </div>
+          <!-- Card -->
+          <div class="d-flex">
+            <div class="w-25 mugshotpos">
+            </div>
+            <div class="card card-cascade cascading-admin-card w-75" style="border-top-left-radius:0;border-bottom-left-radius:0;box-shadow: none;border-radius: 0;border-top-right-radius: 10px;">
+              <div class="admin-up">
+              <!-- <i class="fas fa-user primary-color mr-3 z-depth-2 float-left"></i> -->
+                <div class="data float-left text-left">
+                  <span name = "PlayerName" class="d-block font-weight-bold display-6 text-white w-100 playerName">Loading</span>
+                  <br>
+                  <h4 name = "cash" class="font-weight-bold cashmoney">0$</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card -->
+          <div class="card card-cascade cascading-admin-card" style="margin-top: 0;border-top-left-radius: 0;box-shadow: none;border-top-right-radius: 0;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;">
+
+            <!-- Card Data -->
+
+            <!-- Card content -->
+            <div class="card-body card-body-cascade">
+              <div class="bar health">
+                <i class="fa fa-heartbeat"></i>
+                <div class="progress my-auto" style="width: 90%;float: right;">
+                  <div class="progress-bar bg-danger progress-health" role="progressbar" style="width: 0%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <div class="bar armor">
+                <i class="fa fa-shield-alt"></i>
+                <div class="progress my-auto" style="width: 90%;float: right;">
+                  <div class="progress-bar bg-white progress-armor" role="progressbar" style="width: 0%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <div class="bar food">
+                <i class="fa fa-utensils"></i>
+                <div class="progress my-auto" style="width: 90%;float: right;">
+                  <div class="progress-bar orange darken-2 progress-hunger" role="progressbar" style="width: 0%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <div class="bar water">
+                <i class="fa fa-burn"></i>
+                <div class="progress my-auto" style="width: 90%;float: right;">
+                  <div class="progress-bar bg-primary progress-thirst" role="progressbar" style="width: 0%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Card -->
+          <p class="infolabel" name="jobimg" style="background-image: url(assets/imgs/gang.png);display: none;">
+            <!-- <i class="fa fa-stethoscope"></i> -->
+            <!-- <img src="" name="jobimg" alt=""> -->
+            <span name="job" class="p-2 mb-4 text-center text-white labels">Shahrvand</span>
+          </p>
+          <p class="infolabel" name="gangimg" style="background-image: url(assets/imgs/gang.png);display: none;">
+            <!-- <img src="assets/imgs/gang.png" name="gangimg" alt=""> -->
+            <span name="gang" class="p-2 mb-4 text-center text-white labels">No Gang</span>
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
+
+          <!-- Card -->
+
+          <!-- Card -->
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+
+      </div>
+
+
+      <!-- JS Scripts -->
+      <!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script> -->
+      <script src="script.js" type="text/javascript"></script>
+    </body>
+</html>
