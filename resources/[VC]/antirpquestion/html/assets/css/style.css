@@ -1,0 +1,20 @@
+.card {
+  background: #6060607a;
+}
+.card .card-body .card-text {
+  color:#fff;
+}
+.card .fa {
+  color:#fff;
+}
+.cashmoney {
+  color:green;
+}
+.progress, .progress-bar {
+    height: 1rem !important;
+}
+.card .fa {
+  font-size:1.3rem;
+}
+.card .bar { margin-bottom: .3rem; }
+.progress { background: #e9ecef33;}
