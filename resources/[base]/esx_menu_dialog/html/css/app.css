@@ -1,0 +1,83 @@
+@font-face {
+	font-family: AdventPro;
+	src: url('../fonts/AdventPro-Regular.ttf');
+}
+
+#controls {
+	font-family: AdventPro;
+	font-size: 3em;
+	color: #FFF;
+	position: absolute;
+	bottom: 40;
+	right: 40;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.controls {
+	display: none;
+}
+
+.dialog {
+	font-family: AdventPro;
+	background-color: rgba(0,0,0,0.6);
+	color: #fff;
+	box-shadow: 0px 0px 50px 0px #000;
+	position: absolute;
+	overflow: hidden;
+	top: 50%;
+	left: 50%;
+	width: 600px;
+	height: 104px;
+	transform: translate(-50%, -50%);
+	box-shadow: 0px 0px 50px 0px #000;
+	border-radius: 10px;
+}
+button {
+  background: rgb(2,0,36);
+  background: linear-gradient(319deg, rgba(2,0,36,1) 0%, rgba(80,80,80,0.5056689342403629) 0%, rgba(226,224,224,0.5056689342403629) 100%);
+  border: none;
+  border-left: 1px solid #664d39;
+  color: #fff;
+}
+.dialog.big {
+	height: 200px;
+}
+
+.dialog .head {
+	background: rgb(2,0,36);
+	background: linear-gradient(319deg, rgba(2,0,36,1) 0%, rgba(80,80,80,0.2630385487528345) 0%);
+	text-align: center;
+	height: 40px;
+}
+
+.dialog .head span:before {
+	content: "";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.dialog input[type="text"] {
+	width: 100%;
+	height: 32px;
+	background: none;
+  color: #fff;
+  border: 0;
+	padding: 5px;
+}
+
+.dialog textarea {
+	width: 100%;
+	height: 128px;
+}
+
+.dialog button[name="submit"] {
+	width: 50%;
+	height: 32px;
+	border-left: none;
+}
+
+.dialog button[name="cancel"] {
+	width: 50%;
+	height: 32px;
+}

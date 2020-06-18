@@ -1,0 +1,113 @@
+@font-face {
+	font-family: AdventPro;
+	src: url('../fonts/AdventPro-Bold.ttf');
+}
+
+h1{ margin:0; padding: 0.8rem 0; text-transform: capitalize;font-size:3.5vh; }
+.menu {
+	background-color: rgba(0,0,0,0.6);
+	font-family: AdventPro;
+	min-width: 400px;
+	color: #fff;
+	box-shadow: 0px 0px 50px 0px #000;
+	position: absolute;
+	top:1%;
+	left:1%;
+	width: 20%;
+	max-width:20%;
+	height: fit-content;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.menu.align-left {
+	left: 40;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+.menu.align-top-left {
+	left: 40;
+	top: 40;
+}
+
+.menu.align-top {
+	left: 50%;
+	top: 40;
+	transform: translate(-50%, 0);
+}
+
+.menu.align-top-right {
+	right: 10;
+	top: 40;
+}
+
+.menu.align-right {
+	right: 40;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+.menu.align-bottom-right {
+	right: 40;
+	bottom: 40;
+}
+
+.menu.align-bottom {
+	left: 50%;
+	bottom: 40;
+	transform: translate(-50%, 0);
+}
+
+.menu.align-bottom-left {
+	left: 40;
+	bottom: 40;
+}
+
+.menu.align-center {
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.menu .head {
+	background: #fe892a;
+	text-align: center;
+	line-height: 40px;
+}
+
+.menu .menu-items {
+	max-height: 600px;
+	overflow-y: hidden;
+	display: flex;
+}
+
+.menu .menu-items .menu-item {
+	height: 40px;
+	display: block;
+	background-color: #1d1d1dc4;
+	-box-shadow: inset 1px 0px 0px 1px rgba(0, 0, 0, 0.6);
+	height: 32px;
+	line-height: 32px;
+	color: #b3b3b3;
+	text-align: center;
+	font-size: 3.3vh;
+  padding: 5px;
+	text-transform: capitalize;
+	border: 1px solid #3f3f3f;
+	transition: .4s;
+	width: 50%;
+	cursor: pointer;
+}
+
+.menu .menu-items .menu-item.selected, .menu .menu-items .menu-item:hover {
+	background-color: #80491c9e;
+	color: #fff;
+}
+
+.question p {
+    margin: 0;
+    padding: 15px 10px;
+    background: #3f3f3f;
+		font-size: 2vh
+}

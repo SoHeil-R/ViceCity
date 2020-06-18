@@ -1,0 +1,22 @@
+{
+  "name": "mysql-async",
+  "version": "3.0.8",
+  "description": "fivem-mysql-async",
+  "private": true,
+  "scripts": {
+    "build": "webpack"
+  },
+  "contributors": [
+    "Joel Wurtz",
+    "Matthias Mandelartz"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "mysql": "^2.15.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.6.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  }
+}

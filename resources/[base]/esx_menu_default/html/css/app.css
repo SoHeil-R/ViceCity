@@ -1,0 +1,102 @@
+@font-face {
+	font-family: AdventPro;
+	src: url('../fonts/AdventPro-Bold.ttf');
+}
+
+h1{ margin:0; padding: 0.8rem 0; text-transform: capitalize;font-size:2.5vh; }
+.menu {
+	font-family: AdventPro;
+	min-width: 400px;
+	color: #fff;
+	position: absolute;
+	top:1%;
+	left:1%;
+	width: fit-content;
+	max-width:15%;
+	height: fit-content;
+	overflow: hidden;
+}
+
+.menu.align-left {
+	left: 40;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+.menu.align-top-left {
+	left: 40;
+	top: 40;
+}
+
+.menu.align-top {
+	left: 50%;
+	top: 40;
+	transform: translate(-50%, 0);
+}
+
+.menu.align-top-right {
+	right: 10;
+	top: 40;
+}
+
+.menu.align-right {
+	right: 40;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+.menu.align-bottom-right {
+	right: 40;
+	bottom: 40;
+}
+
+.menu.align-bottom {
+	left: 50%;
+	bottom: 40;
+	transform: translate(-50%, 0);
+}
+
+.menu.align-bottom-left {
+	left: 40;
+	bottom: 40;
+}
+
+.menu.align-center {
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.menu .head {
+	background: rgb(2,0,36);
+background: linear-gradient(319deg, rgba(2,0,36,1) 0%, rgba(80,80,80,0.2630385487528345) 0%);
+	text-align: center;
+	line-height: 20px;
+	border-radius: 10px;
+}
+
+.menu .menu-items {
+	max-height: 600px;
+	overflow-y: hidden;
+}
+
+.menu .menu-items .menu-item {
+	display: block;
+	background: rgb(2,0,36);
+	background: linear-gradient(319deg, rgba(2,0,36,1) 0%, rgba(80,80,80,0.2630385487528345) 0%);
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	font-size: 1.3rem;
+  	padding: 3px;
+	text-transform: capitalize;
+	margin: 10px;
+	border-radius: 10px;
+}
+
+
+.menu .menu-items .menu-item.selected {
+	color: #fff;
+	background: rgb(2,0,36);
+	background: linear-gradient(319deg, rgba(2,0,36,1) 0%, rgba(80,80,80,0.5056689342403629) 0%, rgba(226,224,224,0.5056689342403629) 100%);
+}
