@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div id="control" style="display: none;">
+      <table class="btn-grid">
+        <tr>
+          <td><label>Radar</label></td>
+          <td>
+            <button class="btn-red" id="radar-power" data-event="radarPower">On</button>
+          </td>
+          <td>
+            <button id="radar-display" data-event="radarDisplay">Show &horbar; Hide</button>
+          </td>
+        </tr>
+      </table>
+      <table class="btn-grid">
+        <tr>
+          <td><label>Front</label></td>
+          <td>
+            <button class="btn-red" id="front-power" data-event="antennaPower" data-value="front">XMIT</button>
+          </td>
+          <td>
+            <button id="front-mode" data-event="antennaMode" data-value="front">Mode</button>
+          </td>
+        </tr>
+      </table>
+      <table class="btn-grid">
+        <tr>
+          <td><label>Rear</label></td>
+          <td>
+            <button class="btn-red" id="rear-power" data-event="antennaPower" data-value="rear">XMIT</button>
+          </td>
+          <td>
+            <button id="rear-mode" data-event="antennaMode" data-value="rear">Mode</button>
+          </td>
+        </tr>
+      </table>
+      <table class="btn-grid">
+        <tr>
+          <td><label>Beep</label></td>
+          <td>
+            <button class="btn-red" id="radar-beep" data-event="toggleBeep">On</button>
+          </td>
+        </tr>
+      </table>
+      <table class="btn-grid">
+        <tr>
+          <td><label>Fast</label></td>
+          <td>
+            <button id="fast-reset" data-event="resetFast">Reset</button>
+          </td>
+          <td>
+            <button id="fast-set" data-event="setFastLimit">Set Limit</button>
+          </td>
+        </tr>
+      </table>
+
+      <button class="btn-block btn-sm" id="close" data-event="close">Close</button>
+    </div>
+    <div id="radar" style="display: none">
+
+      <div class="primary">
+        <table class="front">
+          <tr>
+            <td>
+              <ul class="lamps">
+                <li id="front-same">Same</li>
+                <li id="front-opp">Opp</li>
+                <li id="front-xmit">XMit</li>
+              </ul>
+            </td>
+            <td>
+              <span class="label">Front</span>
+              <div class="display orange">
+                <span id="front-speed"></span>
+              </div>
+            </td>
+            <td>
+              <span class="label dim">Fast</span>
+              <div class="display red">
+                <span id="front-fast"></span>
+              </div>
+            </td>
+            <td>
+              <div class="arrows">
+                <span class="arrow up" id="front-fwd">&#129053;</span>
+                <span class="arrow down" id="front-bwd">&#129055;</span>
+              </div>
+            </td>
+          </tr>
+        </table>
+      
+        <table class="rear">
+          <tr>
+            <td>
+              <ul class="lamps">
+                <li id="rear-same">Same</li>
+                <li id="rear-opp">Opp</li>
+                <li id="rear-xmit">XMit</li>
+              </ul>
+            </td>
+            <td>
+              <div class="display orange">
+                <span id="rear-speed"></span>
+              </div>
+              <span class="label">Rear</span>
+            </td>
+            <td>
+              <div class="display red">
+                <span id="rear-fast"></span>
+              </div>
+              <span class="label dim">Fast</span>
+            </td>
+            <td>
+              <div class="arrows">
+                <span class="arrow up" id="rear-fwd">&#129053;</span>
+                <span class="arrow down" id="rear-bwd">&#129055;</span>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="patrol">
+        <span class="label logo">RS 9000</span>
+        <div class="display green">
+          <span id="patrol-speed"></span>
+        </div>
+        <span class="label">Patrol Speed</span>
+      </div>
+
+    </div>
+
+    <div id="plates" style="display: none">
+      <span class="label">Plate Reader</span>
+      <table class="front">
+        <tr>
+          <td>
+            <ul class="lamps">
+              <li id="front-plate-power">Front</li>
+              <li id="front-plate-lock">Lock</li>
+            </ul>
+          </td>
+          <td>
+            <div class="display plate red">
+              <span id="front-plate"></span>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <table class="rear">
+        <tr>
+          <td>
+            <ul class="lamps">
+              <li id="rear-plate-power">Rear</li>
+              <li id="rear-plate-lock">Lock</li>
+            </ul>
+          </td>
+          <td>
+            <div class="display plate red">
+              <span id="rear-plate"></span>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <script src="index.js" type="text/javascript"></script>
+  </body>
+</html>

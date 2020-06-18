@@ -1,0 +1,12 @@
+{
+  "units": "km/h",
+  "plateReader": true,
+  "beep": true,
+  "fastLimit": 80,
+  "controls": {
+    "openControlPanel": {
+      "modifier": 224,
+      "control": 73
+    }
+  }
+}
