@@ -1,6 +1,6 @@
 # ViceCity
-<p align="center"> <img src="http://uupload.ir/files/clfm_vicecitygif.png" width="512">
-</p> ViceCity Fivem Server
+<img src="http://uupload.ir/files/clfm_vicecitygif.png" width="512" align="center">
+<p align="center">ViceCity Fivem Server</p>
 * * * 
 FA:
 
