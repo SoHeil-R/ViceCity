@@ -1,6 +1,6 @@
 # ViceCity
-<p align="center"> <img src="https://github.com/SoHeil-R/ViceCity/blob/master/ViceCity.png?raw=true" width="512">
-<h1><p align="center"> ViceCity Fivem Server
+<p align="center"> <img src="http://uupload.ir/files/clfm_vicecitygif.png" width="512">
+</p> ViceCity Fivem Server
 * * * 
 FA:
 
