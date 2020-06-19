@@ -4,9 +4,14 @@
 
 * * * 
 <strong>FA:</strong>
-ddddd
+Barye download akharin version ViceCity AntiCheat varad linke discorde zir shavid va channal vcac-updates ra check konid.
+Tamami update ha va akharin noskhe dar anja gharar darad. 
 * * * 
 <strong>EN:</strong>
 For downloading the latest version of ViceCity AntiCheat join the discord link below and check the vcac-updates channel. 
-all of the latest updates will be available there . Enjoy and have fun .
+all of the latest updates will be available there. 
+
+Enjoy and have fun.
+
 # [Discord](https://discord.gg/cpgQqV2)
+  
